@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TID | Tintilin Initiative For Development</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+body { font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+
+/* TOP BAR */
+.top-bar { background: #f8f9fa; font-size: 14px; }
+.top-bar a { text-decoration: none; margin-right: 15px; color: #0d6efd; }
+
+/* MAIN NAV */
+.navbar { background: white; border-bottom: 1px solid #ddd; }
+.navbar-brand { font-weight: bold; color: #0d6efd !important; }
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('ajuong.jpg') center/cover;
+    height: 75vh;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.hero-slide {
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-slide .container {
+    position: relative;
+    z-index: 2;
+}
+/* IMPACT */
+.impact { background: #0d6efd; color: white; }
+
+/* NEWS */
+.news-card img { height: 200px; object-fit: cover; }
+
+/* FOOTER */
+footer { background: #002b5c; color: white; padding: 50px 0; }
+footer a { color: #ffc107; text-decoration: none; }
+
+/* BACK TO TOP BUTTON */
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    z-index: 999;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP UTILITY BAR -->
+<div class="top-bar py-2">
+<div class="container d-flex justify-content-between">
+<div>
+<a href="#" id="topProf">Professionals</a>
+<a href="#" id="topPrivate">Private</a>
+<a href="#" id="topVolunteers">Volunteers</a>
+<a href="#" id="topShop">Shop</a>
+</div>
+<div>
+<select class="form-select form-select-sm w-auto d-inline" id="languageSelect">
+  <option value="en" selected>English</option>
+  <option value="ar">Arabic</option>
+  <option value="fr">French</option>
+</select>
+<a href="#" class="ms-3" id="searchIcon"><i class="bi bi-search"></i></a>
+</div>
+</div>
+</div>
+
+<!-- SEARCH POPUP -->
+<div id="searchPopup" class="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-none" style="z-index: 1050;">
+<div class="d-flex justify-content-center align-items-center h-100">
+<input type="text" id="searchInput" class="form-control w-50" placeholder="Search...">
+<button class="btn btn-warning ms-2" id="closeSearch">Close</button>
+</div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+<div class="container">
+    <a class="navbar-brand" href="index.html" id="navBrand">
+    <img src="logo.jpg" alt="TID Logo" style="height:50px; width:auto;">
+</a>
+<a class="navbar-brand" href="index.html" id="navBrand">TID</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html" id="navHome">Home</a></li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navWhatWeDo">What We Do</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="#" id="menuEdu">Education Programs</a></li>
+<li><a class="dropdown-item" href="#" id="menuHealth">Health & Nutrition</a></li>
+<li><a class="dropdown-item" href="#" id="menuAgri">Agriculture & Livelihood</a></li>
+<li><a class="dropdown-item" href="#" id="menuProtect">Protection & Advocacy</a></li>
+</ul>
+</li>
+
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navWhere" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Where We Work
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navWhere">
+    <li><a class="dropdown-item" href="ajuong-thok.html">Ajuong Thok</a></li>
+    <li><a class="dropdown-item" href="pamir.html">Pamir</a></li>
+    <li><a class="dropdown-item" href="jamjang.html">Jamjang</a></li>
+  </ul>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navResources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Resources
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navResources">
+    <li><a class="dropdown-item" href="Organization_profile.pdf" download>Organisation Profile Document</a></li>
+    <li><a class="dropdown-item" href="#docs/annual-report.pdf" download>Annual Report</a></li>
+    <li><a class="dropdown-item" href="#docs/publications.pdf" download>Publications</a></li>
+    <li><a class="dropdown-item" href="#docs/policies.pdf" download>Policies & Guidelines</a></li>
+  </ul>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" id="navAbout">About Us</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="organisation.html" id="menuOrg">Organisation</a></li>
+<li><a class="dropdown-item" href="framework.html" id="menuFramework">Strategic Framework & Partners</a></li>
+<li><a class="dropdown-item" href="about.html" id="menuOverview">Overview</a></li>
+<li><a class="dropdown-item" href="contact.html" id="menuContact">Contact</a></li>
+</ul>
+</li>
+
+<li class="nav-item ms-3">
+<a class="btn btn-warning" href="donate.html" id="navDonate">Donate</a>
+</li>
+
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO SLIDER -->
+<section>
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="hero-slide" style="background-image: url('ajuong.jpg');">
+        <div class="container text-white">
+          <h1 id="heroTitle">Building Resilient Communities</h1>
+          <p class="lead" id="heroLead">Integrated humanitarian and development solutions.</p>
+          <a href="donate.html" class="btn btn-warning btn-lg mt-3" id="heroBtn">Support Our Work</a>
+        </div>
+      </div>
+    </div>
+
+  <!-- Slide 2 -->
+<div class="carousel-item">
+  <div class="hero-slide" style="background-image: url('ins.jpg');">
+    <div class="container text-white">
+      <h1 id="heroTitle2">Digital Education Initiative</h1>
+      <p class="lead" id="heroLead2">
+        Equipping pupils with modern learning tools.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 3 -->
+<div class="carousel-item">
+  <div class="hero-slide" style="background-image: url('education.jpg');">
+    <div class="container text-white">
+      <h1 id="heroTitle3">Youth Empowerment</h1>
+      <p class="lead" id="heroLead3">
+        ICT and entrepreneurship development programs.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 4 -->
+<div class="carousel-item">
+  <div class="hero-slide" style="background-image: url('forum.jpg');">
+    <div class="container text-white">
+      <h1 id="heroTitle4">Women Leadership Forum</h1>
+      <p class="lead" id="heroLead4">
+        Supporting women-led businesses and leadership.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 5 -->
+<div class="carousel-item">
+  <div class="hero-slide" style="background-image: url('youth.jpg');">
+    <div class="container text-white">
+      <h1 id="heroTitle5">Agriculture & Livelihood</h1>
+      <p class="lead" id="heroLead5">
+        Building sustainable and resilient communities.
+      </p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <!-- PREVIOUS BUTTON -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <!-- NEXT BUTTON -->
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="py-5">
+<div class="container">
+<h2 class="mb-4" id="aboutTitle">About TID</h2>
+<p id="aboutText">
+Tintilin Initiative For Development (TID) is a humanitarian and development
+organization committed to empowering vulnerable communities through integrated,
+sustainable solutions that create long-term impact.
+</p>
+</div>
+</section>
+
+<!-- IMPACT -->
+<section class="impact py-5 text-center">
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<h1>32</h1>
+<p id="impact1">Communities Served</p>
+</div>
+<div class="col-md-3">
+<h1>5,000+</h1>
+<p id="impact2">Beneficiaries</p>
+</div>
+<div class="col-md-3">
+<h1>120+</h1>
+<p id="impact3">Projects Implemented</p>
+</div>
+<div class="col-md-3">
+<h1>10+</h1>
+<p id="impact4">Years Experience</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- NEWS -->
+<section class="py-5">
+<div class="container">
+<h2 class="mb-4" id="newsTitle">Latest News</h2>
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card news-card shadow">
+<img src="ins.jpg" class="card-img-top">
+<div class="card-body">
+<h5 id="news1Title">Training Pupils on INS programs</h5>
+<p id="news1Desc">Educating children how to learn through uisng INS Tools like Tablets.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card news-card shadow">
+<img src="youth.jpg" class="card-img-top">
+<div class="card-body">
+<h5 id="news2Title">Youth Skills Program</h5>
+<p id="news2Desc">Training youth in ICT and entrepreneurship.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card news-card shadow">
+<img src="forum.jpg" class="card-img-top">
+<div class="card-body">
+<h5 id="news3Title">Women Empowerment Forum</h5>
+<p id="news3Desc">Supporting women-led businesses in communities.</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<h5 id="footerBrand">TID</h5>
+<p id="footerDesc">Empowering communities through integrated development strategies.</p>
+</div>
+<div class="col-md-3">
+<h6 id="footerLinksTitle">Quick Links</h6>
+<ul class="list-unstyled">
+<li><a href="about.html" id="footerAbout">About</a></li>
+<li><a href="#" id="footerPrograms">Programs</a></li>
+<li><a href="#" id="footerReports">Reports</a></li>
+<li><a href="#" id="footerCareers">Careers</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<h6 id="footerResourcesTitle">Resources</h6>
+<ul class="list-unstyled">
+<li><a href="#" id="footerAnnual">Annual Reports</a></li>
+<li><a href="#" id="footerPublic">Publications</a></li>
+<li><a href="#" id="footerPolicies">Policies</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<h6 id="footerContactTitle">Contact</h6>
+<p id="footerEmail">Email: info@icdi.org</p>
+<p id="footerPhone">Phone: +211 000 000 000</p>
+</div>
+</div>
+<hr>
+<div class="text-center" id="footerCopy">
+© 2026 Tintilin Initiative For Development (TID) |
+<a href="#">Privacy Policy</a> |
+<a href="#">Accessibility</a> |
+<a href="#">Code of Conduct</a>
+</div>
+</div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button onclick="topFunction()" id="backToTop" class="btn btn-warning rounded-circle"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ===============================
+    // BACK TO TOP BUTTON
+    // ===============================
+    const mybutton = document.getElementById("backToTop");
+
+    if (mybutton) {
+        window.addEventListener("scroll", function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        });
+
+        window.topFunction = function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+    }
+
+    // ===============================
+    // SEARCH POPUP
+    // ===============================
+    const searchIcon = document.getElementById("searchIcon");
+    const searchPopup = document.getElementById("searchPopup");
+    const closeSearch = document.getElementById("closeSearch");
+
+    if (searchIcon && searchPopup && closeSearch) {
+        searchIcon.addEventListener("click", function () {
+            searchPopup.classList.remove("d-none");
+        });
+
+        closeSearch.addEventListener("click", function () {
+            searchPopup.classList.add("d-none");
+        });
+    }
+
+    // ===============================
+    // LANGUAGE SWITCHER
+    // ===============================
+
+    const translations = {
+        /* === KEEP YOUR FULL TRANSLATIONS OBJECT HERE EXACTLY AS YOU WROTE IT === */
+        // Language switcher
+en: {
+topProf: "Professionals",
+topPrivate: "Private Sector",
+topVolunteers: "Volunteers",
+topShop: "Shop",
+
+navHome: "Home",
+navWhatWeDo: "What We Do",
+menuEdu: "Education Programs",
+menuHealth: "Health & Nutrition",
+menuAgri: "Agriculture & Livelihood",
+menuProtect: "Protection & Advocacy",
+navWhere: "Where We Work",
+navResources: "Resources",
+navAbout: "About Us",
+menuOrg: "Organisation",
+menuFramework: "Strategic Framework & Partners",
+menuOverview: "Overview",
+menuContact: "Contact",
+navDonate: "Donate",
+
+heroTitle: "Building Resilient Communities",
+heroLead: "Delivering integrated humanitarian and sustainable development solutions.",
+heroBtn: "Support Our Work",
+
+aboutTitle: "About TID",
+aboutText: "Tintilin Initiative For Development (TID) is a humanitarian and development organization dedicated to empowering vulnerable communities through sustainable, inclusive and impactful interventions.",
+
+impact1: "Communities Served",
+impact2: "Direct Beneficiaries",
+impact3: "Projects Implemented",
+impact4: "Years of Experience",
+
+newsTitle: "Latest Updates",
+news1Title: "Digital Learning Initiative",
+news1Desc: "Equipping pupils with innovative digital learning tools and training.",
+news2Title: "Youth Skills Development",
+news2Desc: "Empowering youth through ICT, entrepreneurship and vocational training.",
+news3Title: "Women Economic Empowerment",
+news3Desc: "Strengthening women-led enterprises and community leadership.",
+heroTitle2: "Digital Education Initiative",
+heroLead2: "Equipping pupils with modern learning tools.",
+
+heroTitle3: "Youth Empowerment",
+heroLead3: "ICT and entrepreneurship development programs.",
+
+heroTitle4: "Women Leadership Forum",
+heroLead4: "Supporting women-led businesses and leadership.",
+
+heroTitle5: "Agriculture & Livelihood",
+heroLead5: "Building sustainable and resilient communities.",
+
+footerBrand: "TID",
+footerDesc: "Empowering communities through integrated and sustainable development strategies.",
+footerLinksTitle: "Quick Links",
+footerAbout: "About",
+footerPrograms: "Programs",
+footerReports: "Reports",
+footerCareers: "Careers",
+
+footerResourcesTitle: "Resources",
+footerAnnual: "Annual Reports",
+footerPublic: "Publications",
+footerPolicies: "Policies",
+
+footerContactTitle: "Contact",
+footerEmail: "Email: info@tid.org",
+footerPhone: "Phone: +211 000 000 000",
+
+footerCopy: "© 2026 Tintilin Initiative For Development (TID) | Privacy Policy | Accessibility | Code of Conduct"
+},
+
+// ----------------- ARABIC -----------------
+
+ar: {
+topProf: "المهنيون",
+topPrivate: "القطاع الخاص",
+topVolunteers: "المتطوعون",
+topShop: "المتجر",
+
+navHome: "الرئيسية",
+navWhatWeDo: "ماذا نفعل",
+menuEdu: "برامج التعليم",
+menuHealth: "الصحة والتغذية",
+menuAgri: "الزراعة وسبل كسب العيش",
+menuProtect: "الحماية والمناصرة",
+navWhere: "أين نعمل",
+navResources: "الموارد",
+navAbout: "من نحن",
+menuOrg: "المنظمة",
+menuFramework: "الإطار الاستراتيجي والشركاء",
+menuOverview: "نظرة عامة",
+menuContact: "اتصل بنا",
+navDonate: "تبرع",
+
+heroTitle: "بناء مجتمعات قادرة على الصمود",
+heroLead: "نقدم حلولاً إنسانية وتنموية مستدامة ومتكاملة.",
+heroBtn: "ادعم عملنا",
+
+aboutTitle: "حول TID",
+aboutText: "مبادرة تينتلين للتنمية (TID) هي منظمة إنسانية وتنموية تعمل على تمكين المجتمعات الضعيفة من خلال تدخلات مستدامة وشاملة ذات أثر طويل الأمد.",
+
+impact1: "المجتمعات المستفيدة",
+impact2: "المستفيدون المباشرون",
+impact3: "المشاريع المنفذة",
+impact4: "سنوات الخبرة",
+
+newsTitle: "آخر المستجدات",
+news1Title: "مبادرة التعليم الرقمي",
+news1Desc: "تزويد التلاميذ بأدوات تعليمية رقمية مبتكرة وتدريب متخصص.",
+news2Title: "تنمية مهارات الشباب",
+news2Desc: "تمكين الشباب من خلال التدريب في تكنولوجيا المعلومات وريادة الأعمال.",
+news3Title: "التمكين الاقتصادي للمرأة",
+news3Desc: "دعم المشاريع التي تقودها النساء وتعزيز دورهن القيادي.",
+heroTitle2: "مبادرة التعليم الرقمي",
+heroLead2: "تزويد التلاميذ بأدوات تعليم حديثة.",
+
+heroTitle3: "تمكين الشباب",
+heroLead3: "برامج تطوير مهارات تكنولوجيا المعلومات وريادة الأعمال.",
+
+heroTitle4: "منتدى قيادة المرأة",
+heroLead4: "دعم المشاريع والقيادات النسائية.",
+
+heroTitle5: "الزراعة وسبل العيش",
+heroLead5: "بناء مجتمعات مستدامة وقادرة على الصمود.",
+
+
+footerBrand: "TID",
+footerDesc: "تمكين المجتمعات من خلال استراتيجيات تنمية مستدامة ومتكاملة.",
+footerLinksTitle: "روابط سريعة",
+footerAbout: "حول",
+footerPrograms: "البرامج",
+footerReports: "التقارير",
+footerCareers: "الوظائف",
+
+footerResourcesTitle: "الموارد",
+footerAnnual: "التقارير السنوية",
+footerPublic: "المنشورات",
+footerPolicies: "السياسات",
+
+footerContactTitle: "اتصل بنا",
+footerEmail: "البريد الإلكتروني: info@tid.org",
+footerPhone: "الهاتف: +211 000 000 000",
+
+footerCopy: "© 2026 مبادرة تينتلين للتنمية (TID) | سياسة الخصوصية | سهولة الوصول | مدونة السلوك"
+},
+
+// ----------------- FRENCH -----------------
+
+fr: {
+topProf: "Professionnels",
+topPrivate: "Secteur privé",
+topVolunteers: "Bénévoles",
+topShop: "Boutique",
+
+navHome: "Accueil",
+navWhatWeDo: "Nos activités",
+menuEdu: "Programmes d'éducation",
+menuHealth: "Santé & Nutrition",
+menuAgri: "Agriculture & Moyens de subsistance",
+menuProtect: "Protection & Plaidoyer",
+navWhere: "Zones d'intervention",
+navResources: "Ressources",
+navAbout: "À propos",
+menuOrg: "Organisation",
+menuFramework: "Cadre stratégique & Partenaires",
+menuOverview: "Présentation",
+menuContact: "Contact",
+navDonate: "Faire un don",
+
+heroTitle: "Construire des communautés résilientes",
+heroLead: "Fournir des solutions humanitaires intégrées et durables.",
+heroBtn: "Soutenir notre action",
+
+aboutTitle: "À propos de TID",
+aboutText: "Tintilin Initiative For Development (TID) est une organisation humanitaire et de développement engagée dans l'autonomisation des communautés vulnérables grâce à des interventions durables, inclusives et à fort impact.",
+
+impact1: "Communautés desservies",
+impact2: "Bénéficiaires directs",
+impact3: "Projets réalisés",
+impact4: "Années d'expérience",
+
+newsTitle: "Dernières actualités",
+news1Title: "Initiative d'apprentissage numérique",
+news1Desc: "Fournir aux élèves des outils numériques innovants et des formations adaptées.",
+news2Title: "Développement des compétences des jeunes",
+news2Desc: "Autonomiser les jeunes grâce à l'informatique et à l'entrepreneuriat.",
+news3Title: "Autonomisation économique des femmes",
+news3Desc: "Renforcer les entreprises dirigées par des femmes et leur leadership communautaire.",
+heroTitle2: "Initiative d'éducation numérique",
+heroLead2: "Fournir aux élèves des outils d'apprentissage modernes.",
+
+heroTitle3: "Autonomisation des jeunes",
+heroLead3: "Programmes de développement en TIC et entrepreneuriat.",
+
+heroTitle4: "Forum de leadership féminin",
+heroLead4: "Soutenir les entreprises et le leadership des femmes.",
+
+heroTitle5: "Agriculture & Moyens de subsistance",
+heroLead5: "Construire des communautés durables et résilientes.",
+
+footerBrand: "TID",
+footerDesc: "Renforcer les communautés grâce à des stratégies de développement intégrées et durables.",
+footerLinksTitle: "Liens rapides",
+footerAbout: "À propos",
+footerPrograms: "Programmes",
+footerReports: "Rapports",
+footerCareers: "Carrières",
+
+footerResourcesTitle: "Ressources",
+footerAnnual: "Rapports annuels",
+footerPublic: "Publications",
+footerPolicies: "Politiques",
+
+footerContactTitle: "Contact",
+footerEmail: "Email : info@tid.org",
+footerPhone: "Téléphone : +211 000 000 000",
+
+footerCopy: "© 2026 Tintilin Initiative For Development (TID) | Politique de confidentialité | Accessibilité | Code de conduite"
+}
+    };
+
+    const languageSelect = document.getElementById("languageSelect");
+
+    function changeLanguage(lang) {
+
+        if (!translations[lang]) return;
+
+        for (let key in translations[lang]) {
+            const element = document.getElementById(key);
+            if (element) {
+                element.innerText = translations[lang][key];
+            }
+        }
+
+        // RTL for Arabic
+        if (lang === "ar") {
+            document.body.dir = "rtl";
+            document.body.style.textAlign = "right";
+        } else {
+            document.body.dir = "ltr";
+            document.body.style.textAlign = "left";
+        }
+
+        // Save selected language
+        localStorage.setItem("selectedLanguage", lang);
+    }
+
+    if (languageSelect) {
+        languageSelect.addEventListener("change", function () {
+            changeLanguage(this.value);
+        });
+
+        // Load saved language on refresh
+        const savedLang = localStorage.getItem("selectedLanguage");
+        if (savedLang) {
+            languageSelect.value = savedLang;
+            changeLanguage(savedLang);
+        }
+    }
+
+});
+</script>
+</body>
+</html>

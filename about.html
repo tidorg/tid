@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICDI | About Us</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+body { font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+
+/* Top Bar */
+.top-bar { background: #f8f9fa; font-size: 14px; }
+.top-bar a { text-decoration: none; margin-right: 15px; color: #0d6efd; }
+
+/* Navbar */
+.navbar { background: white; border-bottom: 1px solid #ddd; }
+.navbar-brand { font-weight: bold; color: #0d6efd !important; }
+
+/* Sections */
+section { padding: 60px 0; }
+.section-title { text-align: center; margin-bottom: 50px; }
+
+/* Cards */
+.card { border: none; border-radius: 15px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
+
+/* Core Program Cards */
+.program-card {
+  border-radius: 20px;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #6f42c1, #0d6efd);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.program-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+.program-card h4 { margin-top: 15px; font-size: 1.3rem; font-weight: bold; }
+.program-card p { font-size: 0.95rem; margin-top: 10px; color: #f0f0f0; }
+.program-icon i { font-size: 3rem; margin-bottom: 10px; transition: transform 0.4s, color 0.4s; }
+.program-card:hover .program-icon i { transform: scale(1.3) rotate(15deg); color: #ffc107; }
+
+/* Animated Gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Footer */
+footer { background: #002b5c; color: white; padding: 50px 0; }
+footer a { color: #ffc107; text-decoration: none; }
+
+/* Back to Top */
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    z-index: 999;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+}
+
+/* Search Filter */
+#programSearch { max-width: 400px; margin: 0 auto 30px auto; }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar py-2">
+<div class="container d-flex justify-content-between">
+<div>
+<a href="#" id="topProf">Professionals</a>
+<a href="#" id="topPrivate">Private</a>
+<a href="#" id="topVolunteers">Volunteers</a>
+<a href="#" id="topShop">Shop</a>
+</div>
+<div>
+<select class="form-select form-select-sm w-auto d-inline" id="languageSelect">
+<option value="en" selected>English</option>
+<option value="ar">Arabic</option>
+<option value="fr">French</option>
+</select>
+<a href="#" class="ms-3"><i class="bi bi-search"></i></a>
+</div>
+</div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+<div class="container">
+<a class="navbar-brand" href="index.html"><img src="logo.jpg" alt="TID Logo" style="height:50px;width:auto;"></a>
+<a class="navbar-brand" href="index.html">TID</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html" id="navHome">Home</a></li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navWhatWeDo">What We Do</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="#" id="menuEdu">Education Programs</a></li>
+<li><a class="dropdown-item" href="#" id="menuHealth">Health & Nutrition</a></li>
+<li><a class="dropdown-item" href="#" id="menuAgri">Agriculture & Livelihood</a></li>
+<li><a class="dropdown-item" href="#" id="menuProtect">Protection & Advocacy</a></li>
+</ul>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navWhere" role="button" data-bs-toggle="dropdown">
+Where We Work
+</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="ajuong-thok.html">Ajuong Thok</a></li>
+<li><a class="dropdown-item" href="pamir.html">Pamir</a></li>
+<li><a class="dropdown-item" href="jamjang.html">Jamjang</a></li>
+</ul>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navResources" data-bs-toggle="dropdown">Resources</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="downloads/ICDI_Profile.pdf" download>Organisation Profile</a></li>
+<li><a class="dropdown-item" href="#">Annual Reports</a></li>
+<li><a class="dropdown-item" href="#">Policies & Guidelines</a></li>
+</ul>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" id="navAbout">About Us</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="organisation.html" id="menuOrg">Organisation</a></li>
+<li><a class="dropdown-item" href="framework.html" id="menuFramework">Strategic Framework & Partners</a></li>
+<li><a class="dropdown-item" href="about.html" id="menuOverview">Overview</a></li>
+<li class="active"><a class="dropdown-item" href="contact.html" id="menuContact">Contact</a></li>
+</ul>
+</li>
+
+<li class="nav-item ms-3">
+<a class="btn btn-warning" href="donate.html" id="navDonate">Donate</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="bg-light text-center">
+<div class="container">
+<h1 class="mb-4" id="aboutHeroTitle">About Us</h1>
+<p class="lead" id="aboutHeroText">
+ICDI is a humanitarian and development organization committed to empowering vulnerable communities through integrated, sustainable solutions.
+</p>
+</div>
+</section>
+
+<!-- VISION / MISSION / VALUES -->
+<section>
+<div class="container">
+<div class="row text-center mb-5">
+<div class="col">
+<h2 class="section-title" id="vmvTitle">Our Vision, Mission & Values</h2>
+</div>
+</div>
+<div class="row g-4">
+<div class="col-md-4">
+<div class="card p-4 h-100">
+<h4 id="visionTitle">Our Vision</h4>
+<p id="visionText">To create empowered, self-reliant communities thriving in sustainable development.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card p-4 h-100">
+<h4 id="missionTitle">Our Mission</h4>
+<p id="missionText">To provide holistic and integrated solutions addressing social, economic, and environmental needs of vulnerable communities.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card p-4 h-100">
+<h4 id="valuesTitle">Our Values</h4>
+<ul class="list-unstyled" id="valuesList">
+<li>Integrity</li>
+<li>Accountability</li>
+<li>Inclusiveness</li>
+<li>Collaboration</li>
+<li>Sustainability</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SEARCH FILTER -->
+<section>
+<div class="container">
+<div class="text-center mb-4">
+<input type="text" class="form-control" id="programSearch" placeholder="Search core programs...">
+</div>
+
+<!-- CORE PROGRAMS -->
+<div class="row g-4" id="coreProgramsRow">
+<div class="col-sm-6 col-lg-4 program-item">
+<div class="program-card">
+<div class="program-icon"><i class="bi bi-laptop"></i></div>
+<h4>Digital Skills & Education</h4>
+<p>Empowering youth through digital literacy, ICT training, and educational support.</p>
+</div>
+</div>
+
+<div class="col-sm-6 col-lg-4 program-item">
+<div class="program-card" style="background: linear-gradient(135deg,#ff6b6b,#ffca3a);">
+<div class="program-icon"><i class="bi bi-heart"></i></div>
+<h4>Health & Nutrition</h4>
+<p>Promoting access to essential healthcare and community health programs.</p>
+</div>
+</div>
+
+<div class="col-sm-6 col-lg-4 program-item">
+<div class="program-card" style="background: linear-gradient(135deg,#0dcaf0,#198754);">
+<div class="program-icon"><i class="bi bi-people"></i></div>
+<h4>Child Protection & Advocacy</h4>
+<p>Strengthening child protection systems and promoting rights at community level.</p>
+</div>
+</div>
+
+<div class="col-sm-6 col-lg-4 program-item">
+<div class="program-card" style="background: linear-gradient(135deg,#ffc107,#fd7e14);">
+<div class="program-icon"><i class="bi bi-hand-thumbs-up"></i></div>
+<h4>Livelihoods & Economic Empowerment</h4>
+<p>Supporting income-generating activities and vocational skills for community resilience.</p>
+</div>
+</div>
+
+<div class="col-sm-6 col-lg-4 program-item">
+<div class="program-card" style="background: linear-gradient(135deg,#6f42c1,#0d6efd);">
+<div class="program-icon"><i class="bi bi-peace"></i></div>
+<h4>Peacebuilding & Social Cohesion</h4>
+<p>Facilitating dialogue, conflict resolution, and community-based initiatives to promote unity.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<h5 id="footerBrand">ICDI</h5>
+<p id="footerDesc">Empowering communities through integrated development strategies.</p>
+</div>
+<div class="col-md-3">
+<h6 id="footerLinksTitle">Quick Links</h6>
+<ul class="list-unstyled">
+<li><a href="about.html" id="footerAbout">About</a></li>
+<li><a href="#" id="footerPrograms">Programs</a></li>
+<li><a href="#" id="footerReports">Reports</a></li>
+<li><a href="#" id="footerCareers">Careers</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<h6 id="footerResourcesTitle">Resources</h6>
+<ul class="list-unstyled">
+<li><a href="downloads/ICDI_Profile.pdf" download>Organisation Profile</a></li>
+<li><a href="#" id="footerAnnual">Annual Reports</a></li>
+<li><a href="#" id="footerPolicies">Policies</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<h6 id="footerContactTitle">Contact</h6>
+<p id="footerEmail">Email: info@icdi.org</p>
+<p id="footerPhone">Phone: +211 000 000 000</p>
+</div>
+</div>
+<hr>
+<div class="text-center" id="footerCopy">
+© 2026 Integrated Community Development Initiative | Privacy Policy | Accessibility | Code of Conduct
+</div>
+</div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button onclick="topFunction()" id="backToTop" class="btn btn-warning rounded-circle"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Back to top
+let mybutton = document.getElementById("backToTop");
+window.onscroll = function() { 
+    mybutton.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none"; 
+};
+function topFunction() { document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }
+
+// LANGUAGE SWITCHER
+const translations = {
+en:{
+    topProf:"Professionals", topPrivate:"Private", topVolunteers:"Volunteers", topShop:"Shop",
+    navHome:"Home", navWhatWeDo:"What We Do", menuEdu:"Education Programs", menuHealth:"Health & Nutrition",
+    menuAgri:"Agriculture & Livelihood", menuProtect:"Protection & Advocacy",
+    navWhere:"Where We Work", navResources:"Resources", navAbout:"About Us",
+    menuOrg:"Organisation", menuFramework:"Strategic Framework & Partners", menuOverview:"Overview", menuContact:"Contact",
+    navDonate:"Donate",
+    aboutHeroTitle:"About Us",
+    aboutHeroText:"ICDI is a humanitarian and development organization committed to empowering vulnerable communities through integrated, sustainable solutions.",
+    vmvTitle:"Our Vision, Mission & Values",
+    visionTitle:"Our Vision", visionText:"To create empowered, self-reliant communities thriving in sustainable development.",
+    missionTitle:"Our Mission", missionText:"To provide holistic and integrated solutions addressing social, economic, and environmental needs of vulnerable communities.",
+    valuesTitle:"Our Values",
+    coreProgramsTitle:"Our Core Programs",
+    programDigitalTitle:"Digital Skills & Education", programDigitalText:"Empowering youth and communities through digital literacy, ICT training, and educational support for lifelong learning.",
+    programHealthTitle:"Health & Nutrition", programHealthText:"Promoting access to essential healthcare, nutrition awareness, and community health programs to improve well-being.",
+    programProtectionTitle:"Child Protection & Advocacy", programProtectionText:"Strengthening child protection systems, safeguarding children from harm, and promoting rights and advocacy at community level.",
+    programLivelihoodTitle:"Livelihoods & Economic Empowerment", programLivelihoodText:"Supporting income-generating activities, vocational skills, and sustainable livelihoods for community resilience.",
+    programPeaceTitle:"Peacebuilding & Social Cohesion", programPeaceText:"Facilitating dialogue, conflict resolution, and community-based initiatives to promote peace and unity.",
+    footerBrand:"ICDI", footerDesc:"Empowering communities through integrated development strategies.",
+    footerLinksTitle:"Quick Links", footerAbout:"About", footerPrograms:"Programs", footerReports:"Reports", footerCareers:"Careers",
+    footerResourcesTitle:"Resources", footerAnnual:"Annual Reports", footerPublic:"Publications", footerPolicies:"Policies",
+    footerContactTitle:"Contact", footerEmail:"Email: info@icdi.org", footerPhone:"Phone: +211 000 000 000",
+    footerCopy:"© 2026 Integrated Community Development Initiative | Privacy Policy | Accessibility | Code of Conduct"
+  
+ /* English text (already default) */ },
+ar:{
+topProf:"المحترفون", topPrivate:"خاص", topVolunteers:"المتطوعون", topShop:"المتجر",
+navHome:"الرئيسية", navWhatWeDo:"ماذا نفعل", menuEdu:"برامج التعليم", menuHealth:"الصحة والتغذية", menuAgri:"الزراعة والمعيشة", menuProtect:"الحماية والمناصرة",
+navWhere:"أين نعمل", navResources:"الموارد", navAbout:"معلومات عنا", menuOrg:"المنظمة", menuFramework:"الإطار الاستراتيجي والشركاء", menuOverview:"نظرة عامة", menuContact:"اتصل بنا",
+navDonate:"تبرع", aboutHeroTitle:"معلومات عنا", aboutHeroText:"ICDI منظمة انسانية وتنموية ملتزمة بتمكين المجتمعات الضعيفة من خلال حلول متكاملة ومستدامة.",
+vmvTitle:"رؤيتنا، مهمتنا وقيمنا", visionTitle:"رؤيتنا", visionText:"خلق مجتمعات قوية ومستقلة ومزدهرة في التنمية المستدامة.",
+missionTitle:"مهمتنا", missionText:"تقديم حلول شاملة ومتكاملة لتلبية الاحتياجات الاجتماعية والاقتصادية والبيئية للمجتمعات الضعيفة.",
+valuesTitle:"قيمنا", coreProgramsTitle:"برامجنا الأساسية",
+footerBrand:"ICDI", footerDesc:"تمكين المجتمعات من خلال استراتيجيات التنمية المتكاملة.",
+footerLinksTitle:"روابط سريعة", footerAbout:"معلومات عنا", footerPrograms:"البرامج", footerReports:"التقارير", footerCareers:"الوظائف",
+footerResourcesTitle:"الموارد", footerAnnual:"التقارير السنوية", footerPublic:"المنشورات", footerPolicies:"السياسات",
+footerContactTitle:"اتصل بنا", footerEmail:"البريد الإلكتروني: info@icdi.org", footerPhone:"الهاتف: +211 000 000 000",
+footerCopy:"© 2026 ICDI | سياسة الخصوصية | سهولة الوصول | مدونة السلوك"
+},
+fr:{
+topProf:"Professionnels", topPrivate:"Privé", topVolunteers:"Bénévoles", topShop:"Boutique",
+navHome:"Accueil", navWhatWeDo:"Ce que nous faisons", menuEdu:"Programmes éducatifs", menuHealth:"Santé & Nutrition", menuAgri:"Agriculture & moyens de subsistance", menuProtect:"Protection & Plaidoyer",
+navWhere:"Où nous travaillons", navResources:"Ressources", navAbout:"À propos", menuOrg:"Organisation", menuFramework:"Cadre stratégique & partenaires", menuOverview:"Aperçu", menuContact:"Contact",
+navDonate:"Faire un don", aboutHeroTitle:"À propos de nous", aboutHeroText:"ICDI est une organisation humanitaire et de développement engagée à autonomiser les communautés vulnérables par des solutions intégrées et durables.",
+vmvTitle:"Notre vision, mission & valeurs", visionTitle:"Notre vision", visionText:"Créer des communautés autonomes et prospères dans le développement durable.",
+missionTitle:"Notre mission", missionText:"Fournir des solutions holistiques et intégrées répondant aux besoins sociaux, économiques et environnementaux des communautés vulnérables.",
+valuesTitle:"Nos valeurs", coreProgramsTitle:"Nos programmes clés",
+footerBrand:"ICDI", footerDesc:"Autonomiser les communautés grâce à des stratégies de développement intégrées.",
+footerLinksTitle:"Liens rapides", footerAbout:"À propos", footerPrograms:"Programmes", footerReports:"Rapports", footerCareers:"Carrières",
+footerResourcesTitle:"Ressources", footerAnnual:"Rapports annuels", footerPublic:"Publications", footerPolicies:"Politiques",
+footerContactTitle:"Contact", footerEmail:"Email: info@icdi.org", footerPhone:"Téléphone: +211 000 000 000",
+footerCopy:"© 2026 ICDI | Politique de confidentialité | Accessibilité | Code de conduite"
+}
+};
+
+document.getElementById('languageSelect').addEventListener('change', function() {
+    const lang = this.value;
+    for (let key in translations[lang]) {
+        let el = document.getElementById(key);
+        if (el) el.innerText = translations[lang][key];
+    }
+});
+
+// CORE PROGRAM SEARCH FILTER
+const searchInput = document.getElementById('programSearch');
+searchInput.addEventListener('input', function() {
+    const filter = this.value.toLowerCase();
+    const items = document.querySelectorAll('#coreProgramsRow .program-item');
+    items.forEach(item => {
+        const text = item.innerText.toLowerCase();
+        item.style.display = text.includes(filter) ? '' : 'none';
+    });
+});
+</script>
+
+</body>
+</html>

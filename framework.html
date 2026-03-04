@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TID | Strategic Framework & Partners</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+body { font-family: 'Segoe UI', sans-serif; }
+
+/* Top Bar */
+.top-bar { background: #f8f9fa; font-size: 14px; padding: 0.5rem 0; }
+.top-bar a { text-decoration: none; margin-right: 15px; color: #0d6efd; }
+.top-bar a:hover { text-decoration: underline; }
+
+/* Navbar */
+.navbar { background: white; border-bottom: 1px solid #ddd; }
+.navbar-brand { font-weight: bold; color: #0d6efd !important; text-decoration: none; }
+.navbar-nav .nav-link, .navbar-nav .dropdown-item { text-decoration: none !important; color: #000; }
+.navbar-nav .nav-link:hover, .navbar-nav .dropdown-item:hover { text-decoration: underline; }
+
+/* Sections */
+section { padding: 60px 0; }
+.section-title { text-align: center; margin-bottom: 50px; font-weight: 600; }
+
+/* Cards */
+.card { border: none; border-radius: 15px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
+
+/* Partner Logos */
+.partner-logo { max-height: 80px; object-fit: contain; padding: 20px; }
+
+/* Footer */
+footer { background: #002b5c; color: white; padding: 50px 0; }
+footer a { color: #ffc107; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+<div class="container d-flex justify-content-between">
+<div>
+<a href="#" id="topProf">Professionals</a>
+<a href="#" id="topPrivate">Private</a>
+<a href="#" id="topVolunteers">Volunteers</a>
+<a href="#" id="topShop">Shop</a>
+</div>
+<div>
+<select class="form-select form-select-sm w-auto d-inline" id="languageSelect">
+  <option value="en" selected>English</option>
+  <option value="ar">Arabic</option>
+  <option value="fr">French</option>
+</select>
+<a href="#" class="ms-3" id="searchIcon"><i class="bi bi-search"></i></a>
+</div>
+</div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+<div class="container">
+<a class="navbar-brand" href="index.html" id="navBrand">
+<img src="logo.jpg" alt="TID Logo" style="height:50px; width:auto;">
+<span id="navBrandText">TID</span>
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html" id="navHome">Home</a></li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navWhatWeDo">What We Do</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="#" id="menuEdu">Education Programs</a></li>
+<li><a class="dropdown-item" href="#" id="menuHealth">Health & Nutrition</a></li>
+<li><a class="dropdown-item" href="#" id="menuAgri">Agriculture & Livelihood</a></li>
+<li><a class="dropdown-item" href="#" id="menuProtect">Protection & Advocacy</a></li>
+</ul>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navWhere" role="button" data-bs-toggle="dropdown" aria-expanded="false">Where We Work</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="ajuong-thok.html">Ajuong Thok</a></li>
+<li><a class="dropdown-item" href="pamir.html">Pamir</a></li>
+<li><a class="dropdown-item" href="jamjang.html">Jamjang</a></li>
+</ul>
+</li>
+
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navResources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Resources
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navResources">
+    <li><a class="dropdown-item" href="Organization_profile.pdf" download>Organisation Profile Document</a></li>
+    <li><a class="dropdown-item" href="#docs/annual-report.pdf" download>Annual Report</a></li>
+    <li><a class="dropdown-item" href="#docs/publications.pdf" download>Publications</a></li>
+    <li><a class="dropdown-item" href="#docs/policies.pdf" download>Policies & Guidelines</a></li>
+  </ul>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" id="navAbout">About Us</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="organisation.html" id="menuOrg">Organisation</a></li>
+<li><a class="dropdown-item" href="framework.html" id="menuFramework">Strategic Framework & Partners</a></li>
+<li><a class="dropdown-item" href="about.html" id="menuOverview">Overview</a></li>
+<li><a class="dropdown-item" href="contact.html" id="menuContact">Contact</a></li>
+</ul>
+</li>
+
+<li class="nav-item ms-3">
+<a class="btn btn-warning" href="donate.html" id="navDonate">Donate</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="bg-light text-center">
+<div class="container">
+<h1 id="heroTitle" class="mb-4">Strategic Framework & Partners</h1>
+<p id="heroText" class="lead">TID works with strategic partners and donors to implement sustainable programs across education, health, livelihoods, and protection.</p>
+</div>
+</section>
+
+<!-- STRATEGIC FRAMEWORK CARDS -->
+<section>
+<div class="container">
+<h2 class="section-title" id="frameworkTitle">Our Strategic Framework</h2>
+<div class="row g-4">
+<div class="col-md-6 col-lg-4">
+<div class="card p-4 h-100 text-center">
+<h4 id="frameworkEdu">Education & Skills</h4>
+<p id="frameworkEduText">Enhancing access to education, vocational training, and lifelong learning for communities.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="card p-4 h-100 text-center">
+<h4 id="frameworkHealth">Health & Nutrition</h4>
+<p id="frameworkHealthText">Improving healthcare access, promoting nutrition, and building resilient health systems.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="card p-4 h-100 text-center">
+<h4 id="frameworkAgri">Agriculture & Livelihood</h4>
+<p id="frameworkAgriText">Supporting sustainable livelihoods, food security, and income-generating activities.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="card p-4 h-100 text-center">
+<h4 id="frameworkProtect">Protection & Advocacy</h4>
+<p id="frameworkProtectText">Ensuring human rights, protection of vulnerable groups, and community advocacy.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="card p-4 h-100 text-center">
+<h4 id="frameworkIntegration">Integration & Community Development</h4>
+<p id="frameworkIntegrationText">Promoting inclusive communities, social cohesion, and participatory development.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PARTNERS & DONORS -->
+<section class="bg-light">
+<div class="container">
+<h2 class="section-title" id="partnersTitle">Our Partners & Donors</h2>
+<div class="row g-4 justify-content-center">
+<div class="col-6 col-md-3 col-lg-2 text-center">
+<img src="https://via.placeholder.com/150x80?text=Partner+1" class="partner-logo" alt="Partner 1">
+</div>
+<div class="col-6 col-md-3 col-lg-2 text-center">
+<img src="https://via.placeholder.com/150x80?text=Partner+2" class="partner-logo" alt="Partner 2">
+</div>
+<div class="col-6 col-md-3 col-lg-2 text-center">
+<img src="https://via.placeholder.com/150x80?text=Donor+1" class="partner-logo" alt="Donor 1">
+</div>
+<div class="col-6 col-md-3 col-lg-2 text-center">
+<img src="https://via.placeholder.com/150x80?text=Donor+2" class="partner-logo" alt="Donor 2">
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<h5 id="footerBrand">TID</h5>
+<p id="footerDesc">Empowering communities through integrated development strategies.</p>
+</div>
+<div class="col-md-3">
+<h6 id="footerLinksTitle">Quick Links</h6>
+<ul class="list-unstyled">
+<li><a href="organisation.html" id="footerOrg">Organisation</a></li>
+<li><a href="framework.html" id="footerFramework">Strategic Framework & Partners</a></li>
+<li><a href="about.html" id="footerAbout">About Us</a></li>
+<li><a href="contact.html" id="footerContact">Contact</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<h6 id="footerResourcesTitle">Resources</h6>
+<ul class="list-unstyled">
+<li><a href="#" id="footerAnnual">Annual Reports</a></li>
+<li><a href="#" id="footerPublic">Publications</a></li>
+<li><a href="#" id="footerPolicies">Policies</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<h6 id="footerContactTitle">Contact</h6>
+<p id="footerEmail">Email: info@tid.org</p>
+<p id="footerPhone">Phone: +211 000 000 000</p>
+</div>
+</div>
+
+<hr>
+<div class="text-center" id="footerCopy">
+© 2026 Tintilin Initiative for Development | <a href="#">Privacy Policy</a> | <a href="#">Accessibility</a> | <a href="#">Code of Conduct</a>
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- LANGUAGE TRANSLATION SCRIPT -->
+<script>
+const translations = {
+  en:{
+    heroTitle:"Strategic Framework & Partners",
+    heroText:"TID works with strategic partners and donors to implement sustainable programs across education, health, livelihoods, and protection.",
+    frameworkTitle:"Our Strategic Framework",
+    frameworkEdu:"Education & Skills",
+    frameworkEduText:"Enhancing access to education, vocational training, and lifelong learning for communities.",
+    frameworkHealth:"Health & Nutrition",
+    frameworkHealthText:"Improving healthcare access, promoting nutrition, and building resilient health systems.",
+    frameworkAgri:"Agriculture & Livelihood",
+    frameworkAgriText:"Supporting sustainable livelihoods, food security, and income-generating activities.",
+    frameworkProtect:"Protection & Advocacy",
+    frameworkProtectText:"Ensuring human rights, protection of vulnerable groups, and community advocacy.",
+    frameworkIntegration:"Integration & Community Development",
+    frameworkIntegrationText:"Promoting inclusive communities, social cohesion, and participatory development.",
+    partnersTitle:"Our Partners & Donors",
+    footerBrand:"TID",
+    footerDesc:"Empowering communities through integrated development strategies.",
+    footerLinksTitle:"Quick Links",
+    footerOrg:"Organisation",
+    footerFramework:"Strategic Framework & Partners",
+    footerAbout:"About Us",
+    footerContact:"Contact",
+    footerResourcesTitle:"Resources",
+    footerAnnual:"Annual Reports",
+    footerPublic:"Publications",
+    footerPolicies:"Policies",
+    footerContactTitle:"Contact",
+    footerEmail:"Email: info@tid.org",
+    footerPhone:"Phone: +211 000 000 000",
+    footerCopy:"© 2026 Tintilin Initiative for Development | Privacy Policy | Accessibility | Code of Conduct"
+  },
+  ar:{
+    heroTitle:"الإطار الاستراتيجي والشركاء",
+    heroText:"تعمل TID مع الشركاء الاستراتيجيين والمانحين لتنفيذ برامج مستدامة في التعليم والصحة والمعيشة والحماية.",
+    frameworkTitle:"إطارنا الاستراتيجي",
+    frameworkEdu:"التعليم والمهارات",
+    frameworkEduText:"تعزيز الوصول إلى التعليم والتدريب المهني والتعليم مدى الحياة للمجتمعات.",
+    frameworkHealth:"الصحة والتغذية",
+    frameworkHealthText:"تحسين الوصول إلى الرعاية الصحية، وتعزيز التغذية، وبناء أنظمة صحية قوية.",
+    frameworkAgri:"الزراعة والمعيشة",
+    frameworkAgriText:"دعم سبل العيش المستدامة والأمن الغذائي والأنشطة المدرة للدخل.",
+    frameworkProtect:"الحماية والمناصرة",
+    frameworkProtectText:"ضمان حقوق الإنسان وحماية الفئات الضعيفة والدفاع عن المجتمع.",
+    frameworkIntegration:"التكامل والتنمية المجتمعية",
+    frameworkIntegrationText:"تعزيز المجتمعات الشاملة والتماسك الاجتماعي والتنمية التشاركية.",
+    partnersTitle:"شركاؤنا والمانحون",
+    footerBrand:"TID",
+    footerDesc:"تمكين المجتمعات من خلال استراتيجيات التنمية المتكاملة.",
+    footerLinksTitle:"روابط سريعة",
+    footerOrg:"المنظمة",
+    footerFramework:"الإطار الاستراتيجي والشركاء",
+    footerAbout:"من نحن",
+    footerContact:"اتصل بنا",
+    footerResourcesTitle:"الموارد",
+    footerAnnual:"التقارير السنوية",
+    footerPublic:"المنشورات",
+    footerPolicies:"السياسات",
+    footerContactTitle:"اتصل بنا",
+    footerEmail:"البريد الإلكتروني: info@tid.org",
+    footerPhone:"الهاتف: +211 000 000 000",
+    footerCopy:"© 2026 مبادرة تنتيلين للتنمية | سياسة الخصوصية | سهولة الوصول | مدونة السلوك"
+  },
+  fr:{
+    heroTitle:"Cadre stratégique et partenaires",
+    heroText:"TID travaille avec des partenaires stratégiques et des donateurs pour mettre en œuvre des programmes durables dans les domaines de l'éducation, de la santé, des moyens de subsistance et de la protection.",
+    frameworkTitle:"Notre cadre stratégique",
+    frameworkEdu:"Éducation et compétences",
+    frameworkEduText:"Améliorer l'accès à l'éducation, à la formation professionnelle et à l'apprentissage tout au long de la vie pour les communautés.",
+    frameworkHealth:"Santé et nutrition",
+    frameworkHealthText:"Améliorer l'accès aux soins de santé, promouvoir la nutrition et renforcer les systèmes de santé.",
+    frameworkAgri:"Agriculture et moyens de subsistance",
+    frameworkAgriText:"Soutenir les moyens de subsistance durables, la sécurité alimentaire et les activités génératrices de revenus.",
+    frameworkProtect:"Protection et plaidoyer",
+    frameworkProtectText:"Assurer les droits humains, protéger les groupes vulnérables et défendre la communauté.",
+    frameworkIntegration:"Intégration et développement communautaire",
+    frameworkIntegrationText:"Promouvoir des communautés inclusives, la cohésion sociale et le développement participatif.",
+    partnersTitle:"Nos partenaires et donateurs",
+    footerBrand:"TID",
+    footerDesc:"Autonomiser les communautés grâce à des stratégies de développement intégré.",
+    footerLinksTitle:"Liens rapides",
+    footerOrg:"Organisation",
+    footerFramework:"Cadre stratégique et partenaires",
+    footerAbout:"À propos de nous",
+    footerContact:"Contact",
+    footerResourcesTitle:"Ressources",
+    footerAnnual:"Rapports annuels",
+    footerPublic:"Publications",
+    footerPolicies:"Politiques",
+    footerContactTitle:"Contact",
+    footerEmail:"Email: info@tid.org",
+    footerPhone:"Téléphone: +211 000 000 000",
+    footerCopy:"© 2026 Initiative Tintilin pour le développement | Politique de confidentialité | Accessibilité | Code de conduite"
+  }
+};
+
+function updateLanguage(lang){
+  for(const key in translations[lang]){
+    const el = document.getElementById(key);
+    if(el){
+      el.innerText = translations[lang][key];
+    }
+  }
+}
+
+document.getElementById('languageSelect').addEventListener('change', function(){
+  updateLanguage(this.value);
+});
+
+// Initialize English
+updateLanguage('en');
+</script>
+
+</body>
+</html>

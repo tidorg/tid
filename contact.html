@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TID | Contact Us</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+body { font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+
+/* Top Bar */
+.top-bar {
+    background: #f8f9fa;
+    font-size: 14px;
+}
+.top-bar a {
+    text-decoration: none;
+    margin-right: 15px;
+    color: #0d6efd;
+}
+
+/* Navbar */
+.navbar {
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #0d6efd !important;
+    display: flex;
+    align-items: center;
+}
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Sections */
+section { padding: 60px 0; }
+.section-title { text-align: center; margin-bottom: 50px; }
+
+/* Cards */
+.card { border: none; border-radius: 15px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
+
+/* Footer */
+footer { background: #002b5c; color: white; padding: 50px 0; }
+footer a { color: #ffc107; text-decoration: none; }
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    z-index: 1000;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+<body>
+
+<!-- TOP UTILITY BAR -->
+<div class="top-bar py-2">
+<div class="container d-flex justify-content-between">
+<div>
+<a href="#" id="topProf">Professionals</a>
+<a href="#" id="topPrivate">Private</a>
+<a href="#" id="topVolunteers">Volunteers</a>
+<a href="#" id="topShop">Shop</a>
+</div>
+<div>
+<select class="form-select form-select-sm w-auto d-inline" id="languageSelect">
+  <option value="en" selected>English</option>
+  <option value="ar">Arabic</option>
+  <option value="fr">French</option>
+</select>
+<a href="#" class="ms-3"><i class="bi bi-search"></i></a>
+</div>
+</div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+<div class="container">
+    <a class="navbar-brand" href="index.html" id="navBrand">
+    <img src="logo.jpg" alt="TID Logo">
+</a>
+<a class="navbar-brand" href="index.html" id="navBrandText">TID</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html" id="navHome">Home</a></li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navWhatWeDo">What We Do</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="#" id="menuEdu">Education Programs</a></li>
+<li><a class="dropdown-item" href="#" id="menuHealth">Health & Nutrition</a></li>
+<li><a class="dropdown-item" href="#" id="menuAgri">Agriculture & Livelihood</a></li>
+<li><a class="dropdown-item" href="#" id="menuProtect">Protection & Advocacy</a></li>
+</ul>
+</li>
+
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navWhere" role="button" data-bs-toggle="dropdown">
+    Where We Work
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="ajuong-thok.html">Ajuong Thok</a></li>
+    <li><a class="dropdown-item" href="pamir.html">Pamir</a></li>
+    <li><a class="dropdown-item" href="jamjang.html">Jamjang</a></li>
+  </ul>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navResources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Resources
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navResources">
+    <li><a class="dropdown-item" href="Organization_profile.pdf" download>Organisation Profile Document</a></li>
+    <li><a class="dropdown-item" href="#docs/annual-report.pdf" download>Annual Report</a></li>
+    <li><a class="dropdown-item" href="#docs/publications.pdf" download>Publications</a></li>
+    <li><a class="dropdown-item" href="#docs/policies.pdf" download>Policies & Guidelines</a></li>
+  </ul>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" id="navAbout">About Us</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="organisation.html" id="menuOrg">Organisation</a></li>
+<li><a class="dropdown-item" href="framework.html" id="menuFramework">Strategic Framework & Partners</a></li>
+<li><a class="dropdown-item" href="about.html" id="menuOverview">Overview</a></li>
+<li><a class="dropdown-item" href="contact.html" id="menuContact">Contact</a></li>
+</ul>
+</li>
+
+<li class="nav-item ms-3">
+<a class="btn btn-warning" href="donate.html" id="navDonate">Donate</a>
+</li>
+
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="bg-light text-center">
+<div class="container">
+<h1 class="mb-2" id="heroTitle">Contact Us</h1>
+<p class="lead mb-1" id="heroLead">
+Get in touch with TID. We are here to answer your questions and provide support.
+</p>
+<p class="text-muted" id="infoLocation">
+<i class="bi bi-geo-alt-fill"></i> Jamjang County, Reweng Administrative Area, South Sudan
+</p>
+</div>
+</section>
+
+<!-- CONTACT FORM & INFO -->
+<section>
+<div class="container">
+<div class="row g-5">
+
+<!-- Contact Form -->
+<div class="col-md-6">
+<div class="card p-4">
+<h4 class="mb-4" id="formTitle">Send Us a Message</h4>
+<form>
+<div class="mb-3">
+<label for="name" class="form-label" id="labelName">Name</label>
+<input type="text" class="form-control" id="name" placeholder="Your Name">
+</div>
+<div class="mb-3">
+<label for="email" class="form-label" id="labelEmail">Email</label>
+<input type="email" class="form-control" id="email" placeholder="Your Email">
+</div>
+<div class="mb-3">
+<label for="subject" class="form-label" id="labelSubject">Subject</label>
+<input type="text" class="form-control" id="subject" placeholder="Subject">
+</div>
+<div class="mb-3">
+<label for="message" class="form-label" id="labelMessage">Message</label>
+<textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+</div>
+<button type="submit" class="btn btn-primary" id="btnSend">Send Message</button>
+</form>
+</div>
+</div>
+
+<!-- Contact Info & Map -->
+<div class="col-md-6">
+<div class="card p-4 mb-4">
+<h4 class="mb-3" id="infoTitle">Contact Information</h4>
+<p id="infoEmail"><i class="bi bi-envelope-fill"></i> info@tid.org</p>
+<p id="infoPhone"><i class="bi bi-telephone-fill"></i> +211 000 000 000</p>
+<p id="infoLocation"><i class="bi bi-geo-alt-fill"></i> Jamjang County, Reweng Administrative Area, South Sudan</p>
+</div>
+<div class="ratio ratio-16x9">
+<iframe src="https://maps.google.com/maps?q=Jamjang County, Reweng Administrative Area, South Sudan&t=&z=13&ie=UTF8&iwloc=&output=embed" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<h5 id="footerBrand">TID</h5>
+<p id="footerDesc">Empowering communities through integrated development strategies.</p>
+</div>
+<div class="col-md-3">
+<h6 id="footerLinksTitle">Quick Links</h6>
+<ul class="list-unstyled">
+<li><a href="organisation.html" id="footerAbout">Organisation</a></li>
+<li><a href="framework.html" id="footerFramework">Framework & Partners</a></li>
+<li><a href="about.html" id="footerAboutUs">About Us</a></li>
+<li><a href="contact.html" id="footerContact">Contact</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<h6 id="footerResourcesTitle">Resources</h6>
+<ul class="list-unstyled">
+<li><a href="#" id="footerAnnual">Annual Reports</a></li>
+<li><a href="#" id="footerPublic">Publications</a></li>
+<li><a href="#" id="footerPolicies">Policies</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<h6 id="footerContactTitle">Contact</h6>
+<p id="footerEmail">Email: info@tid.org</p>
+<p id="footerPhone">Phone: +211 000 000 000</p>
+</div>
+</div>
+
+<hr>
+<div class="text-center" id="footerCopy">
+© 2026 Tintilin Initiative for Development | <a href="#">Privacy Policy</a> | <a href="#">Accessibility</a> | <a href="#">Code of Conduct</a>
+</div>
+</div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- LANGUAGE SWITCHER -->
+<script>
+const translations = {
+en: {
+topProf:"Professionals", topPrivate:"Private", topVolunteers:"Volunteers", topShop:"Shop",
+navHome:"Home", navWhatWeDo:"What We Do", navWhere:"Where We Work", navResources:"Resources", navAbout:"About Us",
+navDonate:"Donate", heroTitle:"Contact Us", heroLead:"Get in touch with TID. We are here to answer your questions and provide support.",
+infoLocation:"Jamjang County, Reweng Administrative Area, South Sudan",
+formTitle:"Send Us a Message", labelName:"Name", labelEmail:"Email", labelSubject:"Subject", labelMessage:"Message", btnSend:"Send Message",
+infoTitle:"Contact Information", infoEmail:"info@tid.org", infoPhone:"+211 000 000 000",
+footerBrand:"TID", footerDesc:"Empowering communities through integrated development strategies.",
+footerLinksTitle:"Quick Links", footerAbout:"Organisation", footerFramework:"Framework & Partners", footerAboutUs:"About Us", footerContact:"Contact",
+footerResourcesTitle:"Resources", footerAnnual:"Annual Reports", footerPublic:"Publications", footerPolicies:"Policies",
+footerContactTitle:"Contact", footerEmail:"Email: info@tid.org", footerPhone:"Phone: +211 000 000 000",
+footerCopy:"© 2026 Tintilin Initiative for Development | Privacy Policy | Accessibility | Code of Conduct"
+},
+ar: {
+topProf:"المحترفون", topPrivate:"خاص", topVolunteers:"المتطوعون", topShop:"المتجر",
+navHome:"الرئيسية", navWhatWeDo:"ماذا نفعل", navWhere:"أين نعمل", navResources:"الموارد", navAbout:"معلومات عنا",
+navDonate:"تبرع", heroTitle:"اتصل بنا", heroLead:"تواصل مع TID. نحن هنا للإجابة على أسئلتك وتقديم الدعم.",
+infoLocation:"مقاطعة جامجامجانغ، منطقة ريوينغ الإدارية، جنوب السودان",
+formTitle:"أرسل لنا رسالة", labelName:"الاسم", labelEmail:"البريد الإلكتروني", labelSubject:"الموضوع", labelMessage:"الرسالة", btnSend:"إرسال",
+infoTitle:"معلومات الاتصال", infoEmail:"info@tid.org", infoPhone:"+211 000 000 000",
+footerBrand:"TID", footerDesc:"تمكين المجتمعات من خلال استراتيجيات التنمية المتكاملة.",
+footerLinksTitle:"روابط سريعة", footerAbout:"المنظمة", footerFramework:"الإطار الاستراتيجي والشركاء", footerAboutUs:"معلومات عنا", footerContact:"اتصل بنا",
+footerResourcesTitle:"الموارد", footerAnnual:"التقارير السنوية", footerPublic:"المنشورات", footerPolicies:"السياسات",
+footerContactTitle:"اتصل بنا", footerEmail:"البريد الإلكتروني: info@tid.org", footerPhone:"الهاتف: +211 000 000 000",
+footerCopy:"© 2026 TID | سياسة الخصوصية | سهولة الوصول | مدونة السلوك"
+},
+fr: {
+topProf:"Professionnels", topPrivate:"Privé", topVolunteers:"Bénévoles", topShop:"Boutique",
+navHome:"Accueil", navWhatWeDo:"Ce que nous faisons", navWhere:"Où nous travaillons", navResources:"Ressources", navAbout:"À propos",
+navDonate:"Faire un don", heroTitle:"Contactez-nous", heroLead:"Entrez en contact avec TID. Nous sommes là pour répondre à vos questions et fournir un support.",
+infoLocation:"Comté de Jamjamjang, zone administrative de Reweng, Soudan du Sud",
+formTitle:"Envoyez-nous un message", labelName:"Nom", labelEmail:"Email", labelSubject:"Sujet", labelMessage:"Message", btnSend:"Envoyer",
+infoTitle:"Informations de contact", infoEmail:"info@tid.org", infoPhone:"+211 000 000 000",
+footerBrand:"TID", footerDesc:"Autonomiser les communautés grâce à des stratégies de développement intégrées.",
+footerLinksTitle:"Liens rapides", footerAbout:"Organisation", footerFramework:"Cadre & Partenaires", footerAboutUs:"À propos", footerContact:"Contact",
+footerResourcesTitle:"Ressources", footerAnnual:"Rapports annuels", footerPublic:"Publications", footerPolicies:"Politiques",
+footerContactTitle:"Contact", footerEmail:"Email: info@tid.org", footerPhone:"Téléphone: +211 000 000 000",
+footerCopy:"© 2026 Tintilin Initiative for Development | Politique de confidentialité | Accessibilité | Code de conduite"
+}
+};
+
+document.getElementById('languageSelect').addEventListener('change', function() {
+    const lang = this.value;
+    for (let key in translations[lang]) {
+        let el = document.getElementById(key);
+        if(el) el.innerText = translations[lang][key];
+    }
+});
+</script>
+
+<!-- Back to Top -->
+<script>
+const backBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+    backBtn.style.display = (window.scrollY > 300) ? 'block' : 'none';
+});
+backBtn.addEventListener('click', () => {
+    window.scrollTo({top:0, behavior:'smooth'});
+});
+</script>
+
+</body>
+</html>

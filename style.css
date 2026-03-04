@@ -1,0 +1,62 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== TOP BAR ===== */
+.top-bar {
+    background: #f8f9fa;
+    font-size: 14px;
+}
+.top-bar a {
+    text-decoration: none;
+    margin-right: 15px;
+    color: #0d6efd;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #0d6efd !important;
+}
+.nav-link {
+    font-weight: 500;
+}
+
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1523240795612-9a054b0db644') center/cover;
+    height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+    padding: 80px 0;
+}
+
+/* ===== CARDS ===== */
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #002b5c;
+    color: white;
+    padding: 50px 0;
+}
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}

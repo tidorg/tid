@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TID | Organisation</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+body { font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+.navbar { background: #fff; border-bottom: 1px solid #ddd; }
+.navbar-brand { font-weight: bold; color: #0d6efd; display: flex; align-items: center; text-decoration: none; }
+.navbar-brand img { height: 50px; width: auto; margin-right: 10px; }
+.navbar-nav .nav-link, .navbar-nav .dropdown-item { text-decoration: none !important; }
+.navbar-nav .nav-link:hover, .navbar-nav .dropdown-item:hover { text-decoration: underline; }
+.hero { background: #f8f9fa; padding: 60px 0; text-align: center; }
+.hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+.hero p { font-size: 1.1rem; color: #555; }
+.card { border: none; border-radius: 15px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); padding: 30px 20px; transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
+.section-title { text-align: center; margin-bottom: 50px; font-weight: 600; }
+footer { background: #002b5c; color: white; padding: 50px 0; }
+footer a { color: #ffc107; text-decoration: none; }
+#backToTop { position: fixed; bottom: 40px; right: 40px; display: none; z-index: 1000; background-color: #0d6efd; color: white; border: none; padding: 10px 15px; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
+</style>
+</head>
+<body>
+
+<!-- TOP UTILITY BAR -->
+<div class="top-bar py-2">
+<div class="container d-flex justify-content-between">
+<div>
+<a href="#" id="topProf">Professionals</a>
+<a href="#" id="topPrivate">Private</a>
+<a href="#" id="topVolunteers">Volunteers</a>
+<a href="#" id="topShop">Shop</a>
+</div>
+<div>
+<select class="form-select form-select-sm w-auto d-inline" id="languageSelect">
+  <option value="en" selected>English</option>
+  <option value="ar">Arabic</option>
+  <option value="fr">French</option>
+</select>
+<a href="#" class="ms-3" id="searchIcon"><i class="bi bi-search"></i></a>
+</div>
+</div>
+</div>
+
+<!-- SEARCH POPUP -->
+<div id="searchPopup" class="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-none" style="z-index: 1050;">
+<div class="d-flex justify-content-center align-items-center h-100">
+<input type="text" id="searchInput" class="form-control w-50" placeholder="Search...">
+<button class="btn btn-warning ms-2" id="closeSearch">Close</button>
+</div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+<div class="container">
+<a class="navbar-brand" href="index.html" id="navBrand">
+<img src="logo.jpg" alt="TID Logo">
+<span id="navBrandText">TID</span>
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html" id="navHome">Home</a></li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="navWhatWeDo">What We Do</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="#" id="menuEdu">Education Programs</a></li>
+<li><a class="dropdown-item" href="#" id="menuHealth">Health & Nutrition</a></li>
+<li><a class="dropdown-item" href="#" id="menuAgri">Agriculture & Livelihood</a></li>
+<li><a class="dropdown-item" href="#" id="menuProtect">Protection & Advocacy</a></li>
+</ul>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navWhere" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+Where We Work
+</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="ajuong-thok.html">Ajuong Thok</a></li>
+<li><a class="dropdown-item" href="pamir.html">Pamir</a></li>
+<li><a class="dropdown-item" href="jamjang.html">Jamjang</a></li>
+</ul>
+</li>
+
+<li class="nav-item"><a class="nav-link" href="#" id="navResources">Resources</a></li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" id="navAbout">About Us</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="organisation.html" id="menuOrg">Organisation</a></li>
+<li><a class="dropdown-item" href="framework.html" id="menuFramework">Strategic Framework & Partners</a></li>
+<li><a class="dropdown-item" href="about.html" id="menuOverview">Overview</a></li>
+<li><a class="dropdown-item" href="contact.html" id="menuContact">Contact</a></li>
+</ul>
+</li>
+
+<li class="nav-item ms-3">
+<a class="btn btn-warning" href="donate.html" id="navDonate">Donate</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<h1 id="heroTitle">Organisation</h1>
+<p id="heroText">TID (Tintilin Initiative for Development) is dedicated to transparent governance and effective program management. Our structure ensures accountability and collaboration.</p>
+</section>
+
+<!-- ORGANISATION SECTIONS -->
+<section class="py-5 bg-light">
+<div class="container">
+<h2 class="section-title" id="missionTitle">Mission & Vision</h2>
+<div class="row justify-content-center">
+<div class="col-md-8 text-center">
+<p id="missionText">Our mission is to empower communities through education, health, livelihood, and protection initiatives. Our vision is a self-reliant and thriving community.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-5">
+<div class="container">
+<h2 class="section-title" id="structureTitle">Organisational Structure</h2>
+<div class="row g-4 justify-content-center">
+<div class="col-md-6 col-lg-4 text-center">
+<div class="card">
+<img src="images/founder.jpg" alt="Founder">
+<h4 id="founderTitle">Founder & Board Chair</h4>
+<ul id="founderRoles">
+<li>Established TID with vision and purpose.</li>
+<li>Provides overall strategic guidance.</li>
+<li>Represents TID in key partnerships.</li>
+</ul>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4 text-center">
+<div class="card">
+<img src="images/director.jpg" alt="Executive Director">
+<h4 id="execDirectorTitle">Executive Director</h4>
+<ul id="execDirectorRoles">
+<li>Leads daily operations and programs.</li>
+<li>Implements policies and strategic plans.</li>
+<li>Oversees staff, volunteers, and initiatives.</li>
+</ul>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4 text-center">
+<div class="card">
+<img src="images/secretary.jpg" alt="Secretary General">
+<h4 id="secTitle">Secretary General</h4>
+<ul id="secRoles">
+<li>Maintains official records and communications.</li>
+<li>Prepares meeting agendas and minutes.</li>
+<li>Supports board and executive team.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<h5 id="footerBrand">TID</h5>
+<p id="footerDesc">Empowering communities through integrated development strategies.</p>
+</div>
+<div class="col-md-3">
+<h6 id="footerLinksTitle">Quick Links</h6>
+<a id="footerOrg" href="organisation.html">Organisation</a><br>
+<a id="footerFramework" href="framework.html">Strategic Framework & Partners</a><br>
+<a id="footerAbout" href="about.html">About Us</a><br>
+<a id="footerContact" href="contact.html">Contact</a>
+</div>
+<div class="col-md-3">
+<h6 id="footerResourcesTitle">Resources</h6>
+<a id="footerAnnual" href="#">Annual Reports</a><br>
+<a id="footerPublic" href="#">Publications</a><br>
+<a id="footerPolicies" href="#">Policies</a>
+</div>
+<div class="col-md-3">
+<h6 id="footerContactTitle">Contact</h6>
+<p id="footerEmail">Email: info@tid.org</p>
+<p id="footerPhone">Phone: +211 000 000 000</p>
+</div>
+</div>
+<hr>
+<div class="text-center" id="footerCopy">© 2026 Tintilin Initiative for Development | Privacy Policy | Accessibility | Code of Conduct</div>
+</div>
+</footer>
+
+<!-- Back to Top -->
+<button id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Back to Top Script -->
+<script>
+const backBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+});
+backBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+<!-- LANGUAGE SCRIPT -->
+<script>
+const translations = {
+en:{
+  heroTitle:"Organisation",
+  heroText:"TID (Tintilin Initiative for Development) is dedicated to transparent governance and effective program management. Our structure ensures accountability and collaboration.",
+  missionTitle:"Mission & Vision",
+  missionText:"Our mission is to empower communities through education, health, livelihood, and protection initiatives. Our vision is a self-reliant and thriving community.",
+  structureTitle:"Organisational Structure",
+  founderTitle:"Founder & Board Chair",
+  founderRoles:[
+    "Established TID with vision and purpose.",
+    "Provides overall strategic guidance.",
+    "Represents TID in key partnerships."
+  ],
+  execDirectorTitle:"Executive Director",
+  execDirectorRoles:[
+    "Leads daily operations and programs.",
+    "Implements policies and strategic plans.",
+    "Oversees staff, volunteers, and initiatives."
+  ],
+  secTitle:"Secretary General",
+  secRoles:[
+    "Maintains official records and communications.",
+    "Prepares meeting agendas and minutes.",
+    "Supports board and executive team."
+  ],
+  footerBrand:"TID",
+  footerDesc:"Empowering communities through integrated development strategies.",
+  footerLinksTitle:"Quick Links",
+  footerOrg:"Organisation",
+  footerFramework:"Strategic Framework & Partners",
+  footerAbout:"About Us",
+  footerContact:"Contact",
+  footerResourcesTitle:"Resources",
+  footerAnnual:"Annual Reports",
+  footerPublic:"Publications",
+  footerPolicies:"Policies",
+  footerContactTitle:"Contact",
+  footerEmail:"Email: info@tid.org",
+  footerPhone:"Phone: +211 000 000 000",
+  footerCopy:"© 2026 Tintilin Initiative for Development | Privacy Policy | Accessibility | Code of Conduct"
+},
+ar:{ /* Arabic translations */ },
+fr:{ /* French translations */ }
+};
+
+function updateLanguage(lang){
+  for(const key in translations[lang]){
+    const el = document.getElementById(key);
+    if(el){
+      if(Array.isArray(translations[lang][key])){
+        el.innerHTML = "";
+        translations[lang][key].forEach(item=>{
+          const li = document.createElement("li");
+          li.textContent = item;
+          el.appendChild(li);
+        });
+      } else {
+        el.innerText = translations[lang][key];
+      }
+    }
+  }
+}
+
+document.getElementById('languageSelect').addEventListener('change', function(){
+  updateLanguage(this.value);
+});
+
+updateLanguage('en');
+</script>
+
+</body>
+</html>
